@@ -1,8 +1,8 @@
-const gameData = require('../gameData/data.json');
+const fs = require('fs');
 
 function dataLoader(){
-    // const title = document.getElementById('gameTitle');
-    // title.innerHTML = gameData[0].title;
-    console.log("!");
+    const data = JSON.parse(fs.readFileSync('src/gameData/data.json'));
+    const title = document.getElementById('gameTitle');
+     title.innerHTML = data[0].title;
+     console.log(data);
 }
-
