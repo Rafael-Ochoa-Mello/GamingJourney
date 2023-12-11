@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <script defer src="js/appFunctions.js"></script>
+    <script defer src="js/dataLoader.js"></script>
+
     <title>Template Frameless</title>
 </head>
 
-<body>
+<body onload="dataLoader()">
     <div class="mainApp">
         <div class="topBar">
             <div class="titleBar">
@@ -29,11 +31,13 @@
                     </button>
                 </div>
             </div>
-            <div class="contentArea">
-                <div class="contentPages"></div>
-            </div>
         </div>
+        <div class="contentArea">
+            <div class="contentPages">
+                <p id="gameTitle">No Data Loaded!</p>
+            </div>
     </div>
+   
 </body>
 
 </html>

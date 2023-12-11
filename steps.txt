@@ -1,0 +1,13 @@
+*************************************
+*									*
+* Gaming Journey - Etapas           *
+*									*
+*************************************
+
+( ) - Definir estrutura para o JSON
+( ) - Método Factory para registro de novos jogos
+( ) - Leitor de arquivo JSON
+( ) - Salvador de arquivo JSON
+
+
+

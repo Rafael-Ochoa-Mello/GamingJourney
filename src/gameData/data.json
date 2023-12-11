@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Super Mario Bros",
+        "imgTitle": "smb.jpeg",
+        "console": "NES",
+        "genre": "Plataform",
+        "finished": true,
+        "solo": false,
+        "players": {
+            "p1": "Rafael",
+            "p2": "Daniela",
+            "p3": null,
+            "p4": null
+        }
+    }
+]
