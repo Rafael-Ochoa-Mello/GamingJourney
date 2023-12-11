@@ -7,6 +7,7 @@
 (X) - Definir estrutura para o JSON
 ( ) - Método Factory para registro de novos jogos
 (X) - Leitor de arquivo JSON
+(X) - Gerador de HTML para os jogos 
 ( ) - Salvador de arquivo JSON
 
 
