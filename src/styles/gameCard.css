@@ -1,0 +1,10 @@
+div.gameCard{
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 15px 0px 15px 0px;
+    background-color: rgb(24, 28, 34);
+}
+
+.gameText{
+    color: white;
+}
