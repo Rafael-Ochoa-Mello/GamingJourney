@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 let tempData = [];
 
@@ -84,10 +85,19 @@ document.getElementById('addGame').addEventListener('click', function(){
     storeData(dq)
 })
 
-//Store data on tempArray
+//Store new game on array, and array on external json file
 function storeData(newGame){
     tempData.push(newGame);
-    console.log(tempData);
+    
+    const savePath = path.join(__dirname+'/gameData/data.json');
+    
+    fs.writeFileSync(savePath, JSON.stringify(tempData), (err)=>{
+        if (err) { throw err; }
+        else
+            console.log("JSON salvo com sucesso");
+    });
+
+
     return true;
 }
 
