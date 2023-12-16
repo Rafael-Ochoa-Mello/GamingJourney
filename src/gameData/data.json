@@ -1,5 +1,6 @@
 [
     {
+        "id":0,
         "title": "Super Mario Bros",
         "imgTitle": "smb.jpeg",
         "console": "NES",
@@ -14,6 +15,7 @@
         }
     },
     {
+        "id":1,
         "title": "Super Mario Bros II",
         "imgTitle": "smb.jpeg",
         "console": "NES",

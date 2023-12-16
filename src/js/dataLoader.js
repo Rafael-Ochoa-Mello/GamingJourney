@@ -28,6 +28,8 @@ function contentGenerator(data){
         gameCard.appendChild(title);
         gameCard.appendChild(console);
         
+        //Binding to container
         container.appendChild(gameCard);        
     }
 }
+
