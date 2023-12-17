@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/gameCard.css">
+    <script defer src="../js/appFunctions.js"></script>
+    <script defer src="../js/dataHandler.js"></script>
+    <title>Template Frameless</title>
+</head>
+
+<body onload="dataLoader()">
+    <div class="mainApp">
+        <div class="topBar">
+            <div class="titleBar">
+                <div class="title">
+                    Gaming Journey  
+                </div>
+                <div class="titleBarBtns">
+                    <button id="minimizeBtn" class="topBtn minimizeBtn">
+                        <img src="../icons/mini.png" alt="">
+                    </button>
+                    <button id="maxResBtn" class="topBtn maximizeBtn">
+                        <img src="../icons/resize.png" alt="">
+                    </button>
+                    <button id="closeBtn" class="topBtn closeBtn">
+                        <img src="../icons/close.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="contentArea">
+            <div class="contentPages">
+                <div id="formContainer">
+                    <form id="gForm">
+                        <label for="gameTitle">Título</label>
+                        <input type="text" name="gameTitle" id="gameTitle" required min="2"><br>
+                            
+                        <div id="selectContainer">
+                            <!-- Console -->
+                            <div>
+                                <label for="console">Console</label>
+                                <select id="console" name="console" required>
+                                        <option value="" disabled>-----|Nintendo|-----</option>
+                                        <option value="Nintendo" selected>Nintendo</option>
+                                        <option value="Super_Nintendo">Super Nintendo</option>
+                                        <option value="Nintendo_64">Nintendo 64</option>
+                                        <option value="GameCube">GameCube</option>
+                                        <option value="Nintendo_Wii">Nintendo Wii</option>
+                                        <option value="GameBoy">Gameboy</option>
+                                        <option value="GameBoy_Color">GameBoy Color</option>
+                                        <option value="GameBoy_Advance">GameBoy Advance</option>
+                                        <option value="Nintendo_DS">Nintendo DS</option>
+                                        <option value="Nintendo_3DS">Nintendo 3DS</option>
+                                        <option value="" disabled>-----|Sega|-----</option>
+                                        <option value="Master_System">Master System</option>
+                                        <option value="Mega_Drive">Mega Drive</option>
+                                        <option value="Dreamcast">Dreamcast</option>
+                                        <option value="Game_Gear">Game Gear</option>
+                                        <option value="" disabled>-----|Sony|-----</option>
+                                        <option value="Playstation">Playstation</option>
+                                        <option value="Playstation_2">Playstation 2</option>
+                                        <option value="Playstation_3">Playstation 3</option>
+                                        <option value="Playstation_4">Playstation 4</option>
+                                        <option value="PSP">PSP</option>                        
+                                </select>
+                            </div>
+                            <!-- Gênero -->
+                            <div>
+                                <label for="genero">Gênero</label>
+                                    <select id="genero" name="genero" required>
+                                            <option value="Plataforma" selected>Plataforma</option>
+                                            <option value="RPG">RPG</option>
+                                            <option value="Luta">Luta</option>
+                                            <option value="Corrida">Corrida</option>                                   
+                                            <option value="Aventura">Aventura</option>
+                                            <option value="Navinha">Navinha</option>
+                                            <option value="Terror">Terror</option>
+                                            <option value="Estrategia">Estratégia</option>
+                                    </select>
+                            </div>
+                        </div>
+
+                        <label for="">Jogadores</label>
+                        <div id="playersNameContainer">
+                            <div class="playersNameColumn">
+                                <label for="playerA">-</label>
+                                <input type="text" name="playerA" id="playerA" required min="2"><br>
+                                <label for="playerB">-</label>
+                                <input type="text" name="playerB" id="playerB" min="2"><br>
+                            </div>
+
+                            <div class="playersNameColumn">
+                                <label for="playerC">-</label>
+                                <input type="text" name="playerC" id="playerC"  min="2"><br>
+                                <label for="playerD">-</label>
+                                <input type="text" name="playerD" id="playerD"  min="2"><br>
+                            </div>
+                        </div>
+
+                        <div id="finished">
+                            <label for="finalizado" style="margin-right: 20px;">Finalizado ?</label><br>
+                            <input type="radio" id="sim" name="finished" value="sim">
+                            <label for="sim">Sim</label><br>
+                            <input type="radio" id="nao" name="finished" value="nao" checked>
+                            <label for="nao">Não</label><br>
+                        </div>
+
+                        <input type="submit" value="Finalizar" id="addGame">
+                    </form>
+            </div>
+            </div>
+            <a href="../index.html">
+                <button>Voltar</button>
+            </a>
+    </div>
+</body>
+</html>
