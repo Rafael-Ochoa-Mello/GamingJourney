@@ -1,8 +1,15 @@
 div.gameCard{
+    width: 500px;
     border: 1px solid gray;
     padding: 20px;
     margin: 15px 0px 15px 0px;
     background-color: rgb(24, 28, 34);
+
+}
+
+div.gameCard:hover{
+    border:1px solid rgb(194, 194, 194);
+    cursor: pointer;
 }
 
 .gameText{

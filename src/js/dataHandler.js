@@ -22,23 +22,40 @@ function contentGenerator(data){
         for(let i = 0; i<data.length; i++){
             let gameCard = document.createElement('div');
             let title = document.createElement('h3');
-            let console = document.createElement('p')
+            let console = document.createElement('p');
+            let genre = document.createElement('p');
+            let finished = document.createElement('p');
+            let players = document.createElement('p');
             
             //Elements styling
             gameCard.classList.add('gameCard');
             title.classList.add('gameText');
             console.classList.add('gameText');
+            genre.classList.add('gameText');
+            finished.classList.add('gameText');
+            players.classList.add('gameText');
     
             //Binding data (from JSON)
             title.textContent = data[i].title;
-            console.textContent = data[i].console;
-    
+            console.textContent = `Console :: ${data[i].console}`;
+            genre.textContent = `Gênero:: ${data[i].genre}`;
+            finished.textContent = `Finalizado ? ${data[i].finished ? 'Sim':'Não'}`;
+            players.textContent = `
+                - ${data[i].players.p1} 
+                ${playerStringDisplayHandler(data[i].players.p2)} 
+                ${playerStringDisplayHandler(data[i].players.p3)} 
+                ${playerStringDisplayHandler(data[i].players.p4)} 
+            `;
+
             //Binding data (to Card)
             gameCard.appendChild(title);
             gameCard.appendChild(console);
+            gameCard.appendChild(genre);
+            gameCard.appendChild(finished);
+            gameCard.appendChild(players);
             
             //Binding to container
-            container.appendChild(gameCard);        
+            container.appendChild(gameCard);      
         }
     }    
 }
@@ -129,4 +146,8 @@ function inputValidation(title, pA ){
     const paVal = stringValidation(pA);
 
     return titleVal && paVal ? true : false;
+}
+
+function playerStringDisplayHandler(name){
+    return name === null ? "" : `| ${name}`;
 }
